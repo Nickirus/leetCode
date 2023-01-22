@@ -5,7 +5,7 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 class PalindromeNumberTest {
-    private final Solution executor = new Solution();
+    private final PalindromeNumberSolution executor = new PalindromeNumberSolution();
 
     @Test
     public void shouldAnswerWithTrue() {

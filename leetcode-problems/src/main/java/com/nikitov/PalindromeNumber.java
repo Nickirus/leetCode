@@ -5,13 +5,13 @@ package com.nikitov;
  */
 public class PalindromeNumber {
     public static void main(String[] args) {
-        var executor = new Solution();
+        var executor = new PalindromeNumberSolution();
         System.out.println(executor.isPalindrome(121));
         System.out.println(executor.isPalindrome(11));
     }
 }
 
-class Solution {
+class PalindromeNumberSolution {
     public boolean isPalindrome(int x) {
         var xString = String.valueOf(x);
         boolean isEvenLength = xString.length() % 2 == 0;
