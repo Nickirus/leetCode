@@ -3,7 +3,7 @@ package com.nikitov;
 import java.util.Arrays;
 
 /**
- * @see <a href="https://leetcode.com/problems/remove-duplicates-from-sorted-array/">palindrome-number</a>
+ * @see <a href="https://leetcode.com/problems/remove-duplicates-from-sorted-array/">remove-duplicates-from-sorted-array</a>
  */
 public class RemoveDuplicatesFromSortedArray {
     public static void main(String[] args) {

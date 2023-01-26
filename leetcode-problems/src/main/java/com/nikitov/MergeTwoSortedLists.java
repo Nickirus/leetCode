@@ -5,7 +5,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 /**
- * @see <a href="https://leetcode.com/problems/merge-two-sorted-lists/">palindrome-number</a>
+ * @see <a href="https://leetcode.com/problems/merge-two-sorted-lists/">merge-two-sorted-lists</a>
  */
 public class MergeTwoSortedLists {
     public static void main(String[] args) {
