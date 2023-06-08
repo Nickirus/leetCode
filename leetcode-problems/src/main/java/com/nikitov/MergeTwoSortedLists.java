@@ -1,9 +1,5 @@
 package com.nikitov;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.stream.Collectors;
-
 /**
  * @see <a href="https://leetcode.com/problems/merge-two-sorted-lists/">merge-two-sorted-lists</a>
  */
@@ -36,30 +32,16 @@ class ListNode {
 
 class MergeTwoSortedListsSolution {
     public ListNode mergeTwoLists(ListNode list1, ListNode list2) {
-        List<Integer> valueList1 = retrieveValues(list1, new ArrayList<>());
-        List<Integer> valueList2 = retrieveValues(list2, new ArrayList<>());
-        valueList1.addAll(valueList2);
-        return buildListNode(valueList1.stream().sorted().collect(Collectors.toList()), 0);
-    }
-
-    private List<Integer> retrieveValues(ListNode listNode, List<Integer> box) {
-        if (listNode == null) {
-            return box;
-        }
-        box.add(listNode.val);
-        if (listNode.next != null) {
-            return retrieveValues(listNode.next, box);
-        }
-        return box;
-    }
-
-    private ListNode buildListNode(List<Integer> mergedList, int index) {
-        if (index < mergedList.size() && index < mergedList.size() - 1) {
-            return new ListNode(mergedList.get(index), buildListNode(mergedList, ++index));
-        } else if (index < mergedList.size()) {
-            return new ListNode(mergedList.get(index));
+        if (list1 != null && list2 != null) {
+            if (list1.val > list2.val) {
+                list2.next = mergeTwoLists(list1, list2.next);
+                return list2;
+            } else {
+                list1.next = mergeTwoLists(list1.next, list2);
+                return list1;
+            }
         } else {
-            return null;
+            return list1 == null ? list2 : list1;
         }
     }
 }
